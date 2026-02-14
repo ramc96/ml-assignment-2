@@ -10,7 +10,7 @@
 | Item | Link |
 |------|------|
 | 🐙 GitHub Repository | https://github.com/ramc96/ml-assignment-2.git |
-| 🚀 Live Streamlit App | *(Add your Streamlit Cloud link here)* |
+| 🚀 Live Streamlit App | https://ml-assignment-2git-bsurgcceyfw4sabpu46ma5.streamlit.app/ |
 
 ---
 
