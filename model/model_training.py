@@ -1,18 +1,3 @@
-"""
-model_training.py
-─────────────────
-BITS Pilani | M.Tech AIML/DSE | Machine Learning – Assignment 2
-Trains all 6 classification models on the Heart Disease dataset
-and prints a full evaluation metrics table.
-
-Usage:
-    python model_training.py
-
-Dataset:
-    heart.csv  (Heart Disease Dataset from Kaggle)
-    https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction
-"""
-
 import pandas as pd
 import numpy as np
 import warnings
