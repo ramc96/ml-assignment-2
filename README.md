@@ -111,59 +111,7 @@ The deployed Streamlit app includes:
 
 ---
 
-## 📁 Repository Structure
 
-```
-ml-assignment-2/
-│── app.py                    ← Streamlit web application
-│── requirements.txt          ← Python dependencies
-│── README.md                 ← This file
-│── model/
-│   └── model_training.py     ← Training script for all 6 models
-```
 
----
-
-## ▶️ Running Locally
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/<your-username>/ml-assignment-2.git
-cd ml-assignment-2
-
-# 2. Install dependencies
-pip install -r requirements.txt
-
-# 3. Train models (optional – for local verification)
-python model/model_training.py
-
-# 4. Launch the Streamlit app
-streamlit run app.py
-```
-
----
-
-## 🛠️ Tech Stack
-
-| Tool | Purpose |
-|------|---------|
-| Python 3.10+ | Core language |
-| scikit-learn | ML models & metrics |
-| XGBoost | Gradient boosting model |
-| Streamlit | Interactive web UI |
-| pandas / numpy | Data processing |
-| matplotlib / seaborn | Visualization |
-
----
-
-## 📌 Key Takeaways
-
-1. **Ensemble methods (XGBoost, Random Forest) consistently outperform** single models on structured/tabular data.
-2. **Logistic Regression and KNN** are strong baselines with good AUC scores.
-3. **Decision Tree** without regularization overfits; bagging (Random Forest) corrects this.
-4. **Naive Bayes** is competitive despite its independence assumption – useful when speed matters.
-5. The **MCC score** is more informative than accuracy for imbalanced datasets, confirming XGBoost's superiority.
-
----
 
 *Submitted for BITS Pilani M.Tech (AIML/DSE) | Machine Learning | Assignment 2 | Feb 2026*
