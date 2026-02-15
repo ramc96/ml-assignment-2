@@ -21,9 +21,7 @@ from sklearn.metrics import (
     confusion_matrix, classification_report
 )
 
-# ─────────────────────────────────────────────
-#  Page config
-# ─────────────────────────────────────────────
+
 st.set_page_config(
     page_title="ML Classification App",
     page_icon="🤖",
@@ -34,9 +32,7 @@ st.title("🤖 ML Classification Model Evaluator")
 st.markdown("**BITS Pilani | M.Tech AIML/DSE | Machine Learning – Assignment 2**")
 st.markdown("---")
 
-# ─────────────────────────────────────────────
-#  Sidebar
-# ─────────────────────────────────────────────
+
 st.sidebar.header("⚙️ Configuration")
 st.sidebar.markdown("### Dataset")
 uploaded_file = st.sidebar.file_uploader(
@@ -62,9 +58,6 @@ st.sidebar.markdown("### Parameters")
 test_size = st.sidebar.slider("Test Split Size", 0.1, 0.4, 0.2, 0.05)
 random_state = st.sidebar.number_input("Random State", value=42, step=1)
 
-# ─────────────────────────────────────────────
-#  Helper: load & preprocess
-# ─────────────────────────────────────────────
 @st.cache_data
 def load_and_preprocess(df, target_col, test_sz, rs):
     """Encode categoricals, scale numerics, split."""
@@ -144,9 +137,6 @@ def plot_confusion_matrix(y_te, y_pred, model_name):
     return fig
 
 
-# ─────────────────────────────────────────────
-#  Main area
-# ─────────────────────────────────────────────
 if uploaded_file is None:
     st.info("👈 Please upload a CSV file from the sidebar to get started.")
     st.markdown("""
@@ -163,7 +153,6 @@ if uploaded_file is None:
     """)
     st.stop()
 
-# ── Load data ──
 try:
     df = pd.read_csv(uploaded_file)
 except Exception as e:
@@ -177,7 +166,6 @@ col2.metric("Columns", df.shape[1])
 col3.metric("Missing Values", df.isnull().sum().sum())
 st.dataframe(df.head(10), use_container_width=True)
 
-# ── Target column selector ──
 target_col = st.selectbox(
     "🎯 Select Target Column",
     options=list(df.columns),
